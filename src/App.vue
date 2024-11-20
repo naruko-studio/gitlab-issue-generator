@@ -78,7 +78,7 @@
       Developed by
       <a href="https://gnehs.net" target="_blank">勝勝寶寶</a> | Made with
       <span @click="randomThemeColor">🥞</span> in Taiwan |
-      <a href="https://github.com/gnehs/issue-generator" target="_blank">GitHub</a>
+      <a href="https://github.com/gnehs/gitlab-issue-generator" target="_blank">GitHub</a>
     </footer>
   </div>
 </template>

@@ -197,6 +197,7 @@ p
 
 .description
   color: var(--theme-color) !important
+
 .box
   padding: 16px 24px
   margin-bottom: 16px

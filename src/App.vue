@@ -63,7 +63,7 @@
     <main class="container" v-else>
       <div class="box">
         <div class="title">尚未選擇活動</div>
-        <p>請先選擇活動。</p>
+        <p class="description">請先選擇活動。</p>
       </div>
       <div class="links">
         <a
@@ -112,7 +112,6 @@
   --mantle: rgb(24, 24, 37)
   --crust: rgb(17, 17, 27)
   --theme-color: var(--rosewater)  // 初始主題色為 Rosewater
-  
   --border-color: #ddd
   line-height: 1.5
   accent-color: var(--theme-color)
@@ -215,7 +214,7 @@ p
   margin-top: 4px
   a
     background-color: var(--theme-color)
-    color: #fff
+    color: var(--base)
     padding: 4px 8px
     border-radius: 8px
     text-decoration: none
@@ -228,7 +227,7 @@ p
 
 .magic-button
   background-color: var(--theme-color)
-  color: #fff
+  color: var(--text)
   font-size: 2rem
   display: block
   margin: 8px auto

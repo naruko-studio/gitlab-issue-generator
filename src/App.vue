@@ -118,8 +118,8 @@
 
 body, html, .v-md-textarea-editor pre, .v-md-textarea-editor textarea, .vuepress-markdown-body
   font-family: 'Ubuntu Mono', 'Noto Sans TC', sans-serif !important
-  background-color: var(--mantle)  // 背景設為 Mantle
-  color: var(--text)  // 文字顏色設為 Text
+  background-color: var(--mantle) !important // 背景設為 Mantle
+  color: var(--text) !important // 文字顏色設為 Text
 
 *
 

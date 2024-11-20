@@ -10,7 +10,7 @@
     <main class="container" v-if="selectedEvent">
       <div class="box">
         <div class="title">小提醒</div>
-        <p>在 Title 或 Description 輸入 #{group} 會自動帶入組別名稱。</p>
+        <p class="description">在 Title 或 Description 輸入 #{group} 會自動帶入組別名稱。</p>
       </div>
       <label>Title</label>
       <input v-model="title" @input="updateLinks" />
@@ -195,6 +195,8 @@ p
   color: var(--theme-color)
   margin-bottom: 8px
 
+.description
+  color: var(--theme-color) !important
 .box
   padding: 16px 24px
   margin-bottom: 16px

@@ -85,7 +85,7 @@
 
 <style lang="sass">
 \:root
-  --theme-color: 244, 169, 64
+  --theme-color: 30, 30, 46
   --border-color: #ddd
   line-height: 1.5
   accent-color: 'var(--theme-color)'

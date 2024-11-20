@@ -25,7 +25,6 @@ export default [
       '開發': ['naruko_hstk'],
       '財務': ['naruko_hstk'],
       '公關': ['naruko_hstk'],
-      '經紀人': ['naruko_hstk'],
     },
   },
 ]

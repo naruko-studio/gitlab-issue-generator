@@ -257,7 +257,7 @@ p
   color: var(--theme-color)
 
 .vuepress-markdown-body
-  color: var(--base) !important
+  color: var(--theme-color) !important
   padding: 20px 20px 30px !important
   font-size: 14px !important
   p

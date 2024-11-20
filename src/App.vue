@@ -84,20 +84,54 @@
 </template>
 
 <style lang="sass">
-\:root
-  --theme-color: 30, 30, 46
+:root
+  --rosewater: rgb(245, 224, 220)
+  --flamingo: rgb(242, 205, 205)
+  --pink: rgb(245, 194, 231)
+  --mauve: rgb(203, 166, 247)
+  --red: rgb(243, 139, 168)
+  --maroon: rgb(235, 160, 172)
+  --peach: rgb(250, 179, 135)
+  --yellow: rgb(249, 226, 175)
+  --green: rgb(166, 227, 161)
+  --teal: rgb(148, 226, 213)
+  --sky: rgb(137, 220, 235)
+  --sapphire: rgb(116, 199, 236)
+  --blue: rgb(137, 180, 250)
+  --lavender: rgb(180, 190, 254)
+  --text: rgb(205, 214, 244)
+  --subtext1: rgb(186, 194, 222)
+  --subtext0: rgb(166, 173, 200)
+  --overlay2: rgb(147, 153, 178)
+  --overlay1: rgb(127, 132, 156)
+  --overlay0: rgb(108, 112, 134)
+  --surface2: rgb(88, 91, 112)
+  --surface1: rgb(69, 71, 90)
+  --surface0: rgb(49, 50, 68)
+  --base: rgb(30, 30, 46)
+  --mantle: rgb(24, 24, 37)
+  --crust: rgb(17, 17, 27)
+  --theme-color: var(--rosewater)  // 初始主題色為 Rosewater
+  
   --border-color: #ddd
   line-height: 1.5
-  accent-color: 'var(--theme-color)'
-body,html,.v-md-textarea-editor pre, .v-md-textarea-editor textarea,.vuepress-markdown-body
+  accent-color: var(--theme-color)
+
+body, html, .v-md-textarea-editor pre, .v-md-textarea-editor textarea, .vuepress-markdown-body
   font-family: 'Ubuntu Mono', 'Noto Sans TC', sans-serif !important
+  background-color: var(--mantle)  // 背景設為 Mantle
+  color: var(--text)  // 文字顏色設為 Text
+
 *
+
   box-sizing: border-box
   transition: all 0.2s ease
+
 a
-  color: 'var(--theme-color)'
+  color: var(--theme-color)
   &:hover
     opacity: 0.8
+
 #wrapper
   display: flex
   flex-direction: column
@@ -108,24 +142,27 @@ a
 header
   padding: 64px 0
   margin-bottom: 16px
-  background-color: rgba(var(--theme-color),.05)
+  background-color: var(--surface1)  // 背景色改為 Surface1
   .title
     font-size: 2rem
+    color: var(--text)  // 標題顏色為 Text
+
 footer
   font-size: 0.875rem
   margin-top: 32px
   padding: 32px 0
   text-align: center
-  color: #999
-  background-color: rgba(var(--theme-color),.05)
+  color: var(--subtext0)  // 文字顏色為 Subtext0
+  background-color: var(--surface1)  // 背景色為 Surface1
 
 label
   display: inline-block
   font-size: 1rem
   margin-top: 16px
   margin-bottom: 8px
-  color: 'var(--theme-color)'
+  color: var(--theme-color)
   filter: brightness(.75)
+
 input:not([type="checkbox"])
   width: 100%
   padding: 8px 12px
@@ -134,34 +171,41 @@ input:not([type="checkbox"])
   font-size: 1.25rem
   &:focus
     outline: none
-    border: 1px solid 'var(--theme-color)'
+    border: 1px solid var(--theme-color)
+
 input[type="checkbox"]
-  accent-color: 'var(--theme-color)'
+  accent-color: var(--theme-color)
   margin-right: 8px
+
 p
   font-size: 1rem
   opacity: 0.5
   margin: 0
+
 .text-center
   text-align: center
+
 .container
   width: min(calc(100vw - 40px),960px)
   margin: 0 auto
   font-size: 16px
+
 .title
   font-size: 1.25rem
   font-weight: bold
-  color: 'var(--theme-color)'
+  color: var(--theme-color)
   margin-bottom: 8px
+
 .box
   padding: 16px 24px
   margin-bottom: 16px
-  border-left: 4px solid 'var(--theme-color)'
-  background-color: rgba(var(--theme-color),.05)
+  border-left: 4px solid var(--theme-color)
+  background-color: var(--surface2)  // 背景色設為 Surface2
   border-radius: 0 16px 16px 0
   p
-    color: 'var(--theme-color)'
+    color: var(--theme-color)
     filter: brightness(0.2)
+
 .links
   display: flex
   flex-wrap: wrap
@@ -170,7 +214,7 @@ p
   gap: 8px
   margin-top: 4px
   a
-    background-color: 'var(--theme-color)'
+    background-color: var(--theme-color)
     color: #fff
     padding: 4px 8px
     border-radius: 8px
@@ -181,8 +225,9 @@ p
     &:active
       box-shadow: 0 5px 10px -5px rgba(var(--theme-color),1)
       transform: translateY(-1px)
+
 .magic-button
-  background-color: 'var(--theme-color)'
+  background-color: var(--theme-color)
   color: #fff
   font-size: 2rem
   display: block
@@ -198,27 +243,34 @@ p
   &:active
     box-shadow: 0 5px 10px -5px rgba(var(--theme-color),1)
     transform: translateY(-1px)
+
 .v-md-editor
   box-shadow: none !important
   border: 1px solid var(--border-color)
+
 .v-pancake:before
   content: "🥞"
+
 .v-name:before
   content: "📛"
+
 .v-md-editor__toolbar-item
-  color: 'var(--theme-color)) !importan'
+  color: var(--theme-color)
+
 .vuepress-markdown-body
-  color: #000 !important
+  color: var(--text) !important
   padding: 20px 20px 30px !important
   font-size: 14px !important
   p
     font-size: 14px !important
     opacity: 1
   a
-    color: 'var(--theme-color)) !importan'
+    color: var(--theme-color) !important
 </style>
+
 <script>
 import events from './assets/events'
+
 export default {
   data() {
     return {
@@ -261,7 +313,6 @@ export default {
   },
   mounted() {
     this.randomThemeColor()
-    // get from query string
     this.selectedEvent = new URLSearchParams(window.location.search).get('event') || null
     this.updateLinks()
   },
@@ -269,50 +320,23 @@ export default {
     updateLinks() {
       this.links = []
       let event = this.events.find(event => event.title === this.selectedEvent)
-      for (let [group, assignUsers] of Object.entries(event.groupList)) {
-        let title = this.title.replaceAll('#{group}', group)
-        let description = this.description.replaceAll('#{group}', group)
-
-        if (this.options.autoAssign && assignUsers.length) {
-          description = `/assign @${assignUsers.join(' @')}\n` + description
-        }
-        description = `/label "${event.inboxLabel}" "${event.groupLabelPrefix}${group}${event.groupLabelPostfix}"\n` + description
-
-        let link = new URL(`https://gitlab.com/${event.repo}/-/issues/new`)
-        link.searchParams.append('issue[title]', title)
-        link.searchParams.append('issue[description]', description)
-        if (this.options.enableRelatedIssue) {
-          link.searchParams.append('add_related_issue', this.relatedIssue)
-        }
-        this.links.push({ title: group, href: link.href })
-      }
-    },
-    createIssue() {
-      for (let link of this.links) {
-        window.open(link.href)
+      for (let [group, assignUsers] of Object.entries(event ? event.assignments : {})) {
+        let hasAssignUser = assignUsers.length
+        this.links.push({
+          group,
+          assignUsers: hasAssignUser ? assignUsers : '待指定',
+        })
       }
     },
     randomThemeColor() {
-      // set :root --theme-color to a random color
-      let colors = [
-      '245, 224, 220',
-      '242, 205, 205',
-      '245, 194, 231',
-      '203, 166, 247',
-      '243, 139, 168',
-      '235, 160, 172',
-      '250, 179, 135',
-      '249, 226, 175',
-      '166, 227, 161',
-      '148, 226, 213',
-      '137, 220, 235',
-      '116, 199, 236',
-      '137, 180, 250',
-      '180, 190, 254',
+      const colors = [
+        '--rosewater', '--flamingo', '--pink', '--mauve', '--red', '--maroon',
+        '--peach', '--yellow', '--green', '--teal', '--sky', '--sapphire', '--blue', '--lavender'
       ]
-      let color = colors[Math.floor(Math.random() * colors.length)]
-      document.documentElement.style.setProperty('--theme-color', color)
+      const randomColor = colors[Math.floor(Math.random() * colors.length)]
+      document.documentElement.style.setProperty('--theme-color', `var(${randomColor})`)
     }
   }
 }
 </script>
+

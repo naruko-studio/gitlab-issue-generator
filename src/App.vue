@@ -227,7 +227,7 @@ p
 
 .magic-button
   background-color: var(--theme-color)
-  color: var(--text)
+  color: var(--base)
   font-size: 2rem
   display: block
   margin: 8px auto
@@ -257,7 +257,7 @@ p
   color: var(--theme-color)
 
 .vuepress-markdown-body
-  color: var(--text) !important
+  color: var(--base) !important
   padding: 20px 20px 30px !important
   font-size: 14px !important
   p
